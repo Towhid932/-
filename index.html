@@ -12,17 +12,12 @@
       padding: 0;
     }
 
+    body {
+      background-color: chartreuse;
+    }
+
     nav {
       background-color: #222;
-    }
-
-    nav .leftnav {
-      width: 50px;
-      overflow: hidden;
-    }
-
-    .leftnav img {
-      width: 50px;
     }
 
     ul {
@@ -39,7 +34,6 @@
       position: relative;
       transition: color 0.2s linear;
       position: relative;
-
     }
 
     ul a:hover {
@@ -61,6 +55,97 @@
       width: 100%;
     }
 
+    section {
+      margin: 20px;
+      background-color: rgba(79, 245, 46, 0.89);
+    }
+
+    .card-wrapper {
+      width: 400px;
+      background-color: white;
+      margin: 100px auto;
+      overflow: hidden;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-image {
+      height: 400px;
+      height: 500px;
+      overflow: hidden;
+      color: aqua;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    .card-image img {
+      width: 400px;
+    }
+
+    .card-image:hover img {
+      filter: grayscale(1);
+    }
+
+    #imdb-rating {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgb(0, 174, 214);
+      color: white;
+      font-weight: 600;
+      padding: 5px 10px;
+      border-radius: 0 0 10px 0;
+    }
+
+    #rotten-rating {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: rgb(0, 174, 214);
+      color: white;
+      font-weight: 600;
+      padding: 5px 10px;
+      border-radius: 0 0 0 10px;
+    }
+
+    .card-details h1 {
+      font-size: 1.8rem;
+      text-transform: uppercase;
+    }
+
+    .card-details p {
+      font-size: 1.1rem;
+      text-align: justify;
+      margin-bottom: 15px;
+    }
+
+    .card-details p:nth-child(2) {
+      color: orangered;
+    }
+
+    .card-details a {
+      text-decoration: none;
+      background-color: rgba(0, 174, 214, 0.2);
+      font-size: 1.3rem;
+      letter-spacing: 3px;
+      display: block;
+      text-align: center;
+      border-radius: 3px;
+      padding: 3px 0;
+      margin-bottom: 30px;
+      transition: 0.3s;
+    }
+
+    .card-details a:hover {
+      background-color: rgb(0, 174, 214);
+    }
+
+    .fa-brands {
+      margin-right: 10px;
+    }
+
     table caption {
       padding: 30px;
       font-size: 25px;
@@ -69,14 +154,44 @@
       font-style: italic;
     }
 
-    body {
-      background-color: chartreuse;
+    section table {
+      background-color: cornflowerblue;
+      margin: 100px auto;
+      border-radius: 5px;
+      box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
+      border-collapse: collapse;
     }
 
-    section {
-      margin: 20px;
-      background-color: rgba(79, 245, 46, 0.89);
+    section table tbody tr {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      cursor: pointer;
     }
+
+    table thead tr th {
+      border: 2px solid rgba(0, 0, 0, 0.5);
+
+    }
+
+    section tbody tr:nth-child(odd) {
+      background-color: salmon;
+    }
+
+    section tbody tr:nth-child(even) {
+      background-color: burlywood;
+    }
+
+    section tr td {
+      text-align: center;
+    }
+
+    section table tbody tr:hover {
+      background-color: whitesmoke;
+    }
+
+    /* section tr td:nth-child(2) {
+      width: 150px;
+      text-align: center;
+    } */
   </style>
 </head>
 
@@ -84,7 +199,7 @@
   <nav>
     <ul>
       <a href="#">Home</a>
-      <a href="#">Product</a>
+      <a href="#section3">গরুর লিস্ট</a>
       <a href="#section1">কুরানির তালিকা</a>
       <a href="#section2">সমাজের মাংসের তালিকা</a>
       <a href="#">Contact</a>
@@ -93,12 +208,61 @@
 
   </nav>
   <main>
+    <div class="card-wrapper">
+      <div class="card-image">
+        <img src="towhid.png" alt="">
+        <p id="imdb-rating">১,১৬,০০০ ৳</p>
+        <p id="rotten-rating">১৫৯ kg</p>
+      </div>
+      <div class="card-details">
+        <h1>Avengers: তোফাজ্জল আহমদ(২০২২)</h1>
+        <p>লাল/ষাঢ়</p>
+        <p>After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of
+          remaining
+          allies, the Avengers assemble once more in ..</p>
+        <a href="https://www.youtube.com/watch?v=Gwz6h50kM9Q" target="_blank"><i class="fa-brands fa-youtube"></i>Watch
+          Trailer</a>
+      </div>
+    </div>
+    <div class="card-wrapper">
+      <div class="card-image">
+        <img src="towhid.png" alt="">
+        <p id="imdb-rating">৯০,০০০ ৳</p>
+        <p id="rotten-rating">94%</p>
+      </div>
+      <div class="card-details">
+        <h1>Avengers: বজল আহমদ (২০২২)</h1>
+        <p>Action/Sci-fi</p>
+        <p>After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of
+          remaining
+          allies, the Avengers assemble once more in ..</p>
+        <a href="https://www.youtube.com/watch?v=Gwz6h50kM9Q" target="_blank"><i class="fa-brands fa-youtube"></i>Watch
+          Trailer</a>
+      </div>
+    </div>
+    <div class="card-wrapper">
+      <div class="card-image">
+        <img src="towhid.png" alt="">
+        <p id="imdb-rating">8.4/10</p>
+        <p id="rotten-rating">94%</p>
+      </div>
+      <div class="card-details">
+        <h1>Avengers: নুরুল আবছার (২০২২)</h1>
+        <p>Action/Sci-fi</p>
+        <p>After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of
+          remaining
+          allies, the Avengers assemble once more in ..</p>
+        <a href="https://www.youtube.com/watch?v=Gwz6h50kM9Q" target="_blank"><i class="fa-brands fa-youtube"></i>Watch
+          Trailer</a>
+      </div>
+    </div>
+
     <section id="section1">
-      <table border="1px" style="border-collapse: collapse">
+      <table>
         <caption>কুরবানি গরুর মালিক</caption>
         <thead>
           <tr>
-            <th rowspan="3"> Serial No.</th>
+            <th rowspan="3"> ক্রমিক নং</th>
             <th colspan="3"> মালিকের নাম</th>
             <th rowspan="3"> গরুর দাম</th>
             <th rowspan="3"> মোট মাংস</th>
@@ -117,17 +281,17 @@
         </thead>
         <tbody>
           <tr>
-            <td>1</td>
+            <td>১</td>
             <td>তোফাজ্জল আহমদ</td>
             <td>স্বপরিবার</td>
             <td>সব</td>
-            <td>1,16,000</td>
+            <td>১,১৬,000</td>
             <td>১৫৯ কেজি</td>
             <td>১০৫.৫ কেজি</td>
             <td>৫৩.৫ কেজি</td>
           </tr>
           <tr>
-            <td>2</td>
+            <td>২</td>
             <td>তোফাইল আহমদ</td>
             <td>যুক্ত</td>
             <td>সব</td>
@@ -250,6 +414,8 @@
 
       </table>
     </section>
+    <hr>
+    <hr>
     <section id="section2">
       <table border="1" style="border-collapse: collapse">
         <caption>যারা কুরবান করে নাই তাদের লিস্ট:-</caption>
@@ -532,7 +698,7 @@
           </tr>
           <tr>
             <td>৩৯</td>
-            <td>হালা মিয়া</td>
+            <td>কালা মিয়া</td>
             <td>তোফাইল আহমদ</td>
             <td></td>
             <td>১১০</td>
@@ -640,6 +806,65 @@
           </tr>
         </tbody>
 
+      </table>
+    </section>
+    <section id="section3">
+      <table>
+        <caption>মাংস কাটার টাকা</caption>
+        <thead>
+          <tr>
+            <th>ক্রমিক নং</th>
+            <th>নাম</th>
+            <th>টাকা</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>০১</td>
+            <td>তোফাইল আহমমদ</td>
+            <td>৫০০ টাকা</td>
+          </tr>
+          <tr>
+            <td>০২</td>
+            <td>ছাদেকুর রহমান</td>
+            <td>৫০০ টাকা</td>
+          </tr>
+          <tr>
+            <td>০৩</td>
+            <td>নাছির</td>
+            <td>৫০০ টাকা</td>
+          </tr>
+          <tr>
+            <td>০৪</td>
+            <td>আবছার</td>
+            <td>৫০০ টাকা</td>
+          </tr>
+          <tr>
+            <td>০৫</td>
+            <td>তোফাজ্জল আহমদ</td>
+            <td>৫০০ টাকা</td>
+          </tr>
+          <tr>
+            <td>০৬</td>
+            <td></td>
+            <td>৫০০ টাকা</td>
+          </tr>
+          <tr>
+            <td>০৭</td>
+            <td>বজল আহমমদ</td>
+            <td>৫০০ টাকা</td>
+          </tr>
+          <tr>
+            <td>০৮</td>
+            <td>মুনু</td>
+            <td>৫০০ টাকা</td>
+          </tr>
+          <tr>
+            <td>০৯</td>
+            <td>জসিম</td>
+            <td>৫০০ টাকা</td>
+          </tr>
+        </tbody>
       </table>
     </section>
   </main>
